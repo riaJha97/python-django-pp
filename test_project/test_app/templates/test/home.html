@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <title> Movie Booking System </title>
+</head>
+
+<body>
+      <div class="container center">
+        <div class="wrapper">
+          <h1> Movie Booking System </h1>
+        </div>
+        <div class="jumbotron">
+          <p>Book your cinema tickets right here at any of our locations!</p>
+        </div>
+        <div class="center">
+          <!-- 1. Link this button to the booking form, a url has already been provided in urls.py-->
+          <a href="{% url 'book_movie' %}" class="btn btn-primary">Book a movie</a>
+        </div>
+      </div>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Booking System</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+
+<body>
+  <div class="container center">
+    <div class="wrapper">
+      <h1>Book a movie</h1>
+    </div>
+    <div class="form-group">
+        <form method="post">
+            {% csrf_token %}
+            <!-- Change this to use loop through all the fields. -->
+            {{ booking_form }}
+            <button type="submit" name="submit" value="Submit" class="btn btn-primary">Find Available Cinemas</button>
+        </form>
+    </div>
+
+  </div>
+</body>
+
+</html>
